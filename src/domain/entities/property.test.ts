@@ -23,13 +23,13 @@ describe("Property Entity", () => {
   it("deve lançar um erro se o nome for vazio", () => {
     expect(() => {
       new Property("1", "", "Descrição", 4, 200);
-    }).toThrow("O nome é obrigatório");
+    }).toThrow("O nome da propriedade é obrigatório.");
   });
 
   it("deve lançar um erro se o número máximo de hospedes for zero ou negativo", () => {
     expect(() => {
       new Property("1", "Casa", "Descrição", 0, 200);
-    }).toThrow("O número máximo de hóspedes deve ser maior que zero");
+    }).toThrow("A capacidade máxima deve ser maior que zero.");
   });
 
   it("deve validar o número máximo de hóspedes", () => {

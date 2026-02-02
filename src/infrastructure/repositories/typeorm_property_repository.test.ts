@@ -12,8 +12,7 @@ describe("TypeORMPropertyRepository", () => {
 
   beforeAll(async () => {
     dataSource = new DataSource({
-      type: "sqlite",
-      database: ":memory:",
+      type: "sqljs",
       dropSchema: true,
       entities: [PropertyEntity, BookingEntity, UserEntity],
       synchronize: true,

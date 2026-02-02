@@ -14,8 +14,7 @@ describe("TypeORMBookingRepository", () => {
 
   beforeAll(async () => {
     dataSource = new DataSource({
-      type: "sqlite",
-      database: ":memory:",
+      type: "sqljs",
       dropSchema: true,
       entities: [BookingEntity, PropertyEntity, UserEntity],
       synchronize: true,

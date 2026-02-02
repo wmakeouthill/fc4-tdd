@@ -9,8 +9,7 @@ describe("TypeORMUserRepository", () => {
 
   beforeAll(async () => {
     dataSource = new DataSource({
-      type: "sqlite",
-      database: ":memory:",
+      type: "sqljs",
       dropSchema: true,
       entities: [UserEntity],
       synchronize: true,
